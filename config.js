@@ -4,4 +4,4 @@ var config = {
   REFRESHTOKEN: 'X/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 }
 
-export default config
+module.exports = config
