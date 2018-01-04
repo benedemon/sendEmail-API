@@ -1,3 +1,4 @@
+import config from './config'
 var express = require('express')
 var nodemailer = require('nodemailer')
 var app = express()
@@ -7,13 +8,13 @@ var smtpTransport = nodemailer.createTransport({
   auth: {
     type: 'OAuth2',
     user: 'user@address.com',
-    clientId: 'XXXXXXXXXXXXX-XXXXXXXXXXXXXXXXXXXXXX.apps.googleusercontent.com',
-    clientSecret: 'XXXXXXX-XXXXXXXXXXXXXXXX',
-    refreshToken: 'X/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+    clientId: config.clientId,
+    clientSecret: config.clientSecret,
+    refreshToken: config.refreshToken
   }
 })
 
-app.get('/send', function (req, res) {
+app.post('/send', function (req, res) {
   var mailOptions = {
     from: 'Email API <benemailapi@gmail.com',
     to: req.query.to,
