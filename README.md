@@ -1,6 +1,6 @@
 # sendEmail-API
 
-This is a REST API that can be hit to send an Email to the given email address from the registered email address. It uses nodemailer.
+This is a REST API that can be hit to send an Email from a configured email address. It uses nodemailer.
 
 ## Installation & Setup :
 
